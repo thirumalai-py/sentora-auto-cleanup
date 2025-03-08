@@ -10,25 +10,25 @@ You can run the script manually to perform a cleanup operation and review the lo
 
 ### How to Use
 Ensure the script has execute permissions:
-`chmod +x auto_clean.sh`
+`chmod +x cleanup.sh`
 
 Run the script:
-`./auto_clean.sh`
+`./cleanup.sh`
 
 ## Automated via Crontab
 To schedule the script to run every day at 12:01 AM, add the following entry to your crontab:
 
-`1 0 * * * /path/to/auto_clean.sh`
+`1 0 * * * /path/to/cleanup.sh`
 
-Replace /path/to/auto_clean.sh with the absolute path to your script. To edit your crontab, run:
+Replace /path/to/cleanup.sh with the absolute path to your script. To edit your crontab, run:
 
 `crontab -e`
 
 ## Configuration
-- TIME_LIMIT: Number of days after which files are considered old (default: 2 days).
-- LOG_DIR: Directory where log files are located (default: /var).
-- LOG_FILE: File where cleanup logs are stored (default: /var/auto_clean_log.txt).
-- SESSION_DIR: Directory containing session files (default: /var/sentora/sessions).
+- `TIME_LIMIT`: Number of days after which files are considered old (default: 2 days).
+- `LOG_DIR`: Directory where log files are located (default: /var).
+- `LOG_FILE`: File where cleanup logs are stored (default: /var/auto_clean_log.txt).
+- `SESSION_DIR`: Directory containing session files (default: /var/sentora/sessions).
 
 If a .env file is present in the same directory as the script, it will be sourced to allow overriding these default values.
 
