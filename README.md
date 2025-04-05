@@ -18,7 +18,7 @@ Run the script:
 ## Automated via Crontab
 To schedule the script to run every day at 12:01 AM, add the following entry to your crontab:
 
-`1 0 * * * /path/to/cleanup.sh`
+`1 12 * * * cd /var && ./cleanup.sh`
 
 Replace /path/to/cleanup.sh with the absolute path to your script. To edit your crontab, run:
 
