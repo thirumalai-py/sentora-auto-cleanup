@@ -4,9 +4,9 @@
 
 current_date=$(date '+%Y-%m-%d %H:%M:%S')
 # Define the log directory and log file
-TIME_LIMIT_MINUTES=60
+TIME_LIMIT_MINUTES=30
 LOG_DIR="/var"  
-LOG_FILE="/var/auto_clean_log_hrs.txt"
+LOG_FILE="/var/report_hourly_cleanup.txt"
 # Define the session directory
 SESSION_DIR="/var/sentora/sessions"
 
